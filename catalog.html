@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Experiment 1 || Catelog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <style>
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 18px 30px;
+            text-decoration: none;
+            font-size: 23px;
+            font-weight: bold;
+        }
+        .display-type{
+            padding: 10px;
+            background: #ccc;
+            color: #fff;
+            margin-right: 5px;
+        }
+        .display-type.active{
+            padding: 10px;
+            background: blue;
+            color: #fff;
+            margin-right: 5px;
+        }
+        .grid-container{
+            display: grid;
+            grid: auto auto / auto auto auto auto;
+            grid-gap: 10px;
+        }
+        .grid-item {
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 30px;
+            background-color:#f9f9f9;
+        }
+        .grid-item img{
+            width: 250px;
+        }
+        .grid-item p{
+            margin: unset;
+        }
+        .grid-item-info{
+            background: #fff;
+            border: 2px solid #f9f9f9;
+            padding: 10px;
+        }
+        .grid-item-info div button{
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            margin: 2px;
+        }
+        .grid-item-info div input{
+            width: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            grid-gap: 10px;
+        }
+        .flex-item {
+            background-color: #f1f1f1;
+            flex: 100%;
+            padding: 10px;
+        }
+        .flex-item .img-block{
+            width: 10%;
+            float: left;
+        }
+        .item-info{
+            width: 85%;
+            float: left;
+        }
+        .flex-item .img-block img{
+            width: 100%;
+        }
+        .item-info div button{
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            margin: 2px;
+        }
+        .item-info div input{
+            width: 50px;
+            padding: 10px;
+            text-align: center;
+        }
+        .p-10{
+            padding: 10px;
+        }
+        .item-info h4{
+            margin: unset;
+            font-size: 30px;
+        }
+        .price{
+            font-size: 20px;
+            padding: 5px;
+        }
+        @media screen and (max-width: 600px) {
+            .grid-container{
+                grid: unset;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a  href="registration.html">Registration</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a class="active" href="catalog.html">Catalog</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="page-content">
+            <h1 class="main-title">Products</h1>
+            <p class="display-style">
+                <a class="display-type active" id="display-1" onclick="changeDisplay('1');">Flex</a>
+                <a class="display-type" id="display-2" onclick="changeDisplay('2');">Grid</a>
+            </p>
+            <div class="flex-container" id="flex-container">
+                <div class="flex-item">
+                    <div class="img-block">
+                        <img src="images/products/1.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Apple</h4>
+                            <p>Rs. 50.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 	
+                <div class="flex-item">	
+                    <div class="img-block">
+                        <img src="images/products/2.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Papaya</h4>
+                            <p>Rs. 35.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="flex-item">
+                    <div class="img-block">
+                        <img src="images/products/3.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Berries</h4>
+                            <p>Rs. 150.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="flex-item">
+                    <div class="img-block">
+                        <img src="images/products/4.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Pasion Fruit</h4>
+                            <p>Rs. 250.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="flex-item">
+                    <div class="img-block">
+                        <img src="images/products/5.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Mangos</h4>
+                            <p>Rs. 60.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="flex-item">
+                    <div class="img-block">
+                        <img src="images/products/6.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Onions</h4>
+                            <p>Rs. 25.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="flex-item">
+                    <div class="img-block">
+                        <img src="images/products/7.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Kivi Fruit</h4>
+                            <p>Rs. 120.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 
+                <div class="flex-item">
+                    <div class="img-block">
+                        <img src="images/products/8.png" alt="About Us" />
+                    </div>  
+                    <div class="item-info">
+                        <div class="p-10">
+                            <h4>Mushroom</h4>
+                            <p>Rs. 180.00/-</p>
+                            <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                        </div>
+                    </div>  
+                </div> 
+            </div> 
+            <div class="grid-container" id="grid-container" style="display: none;">
+                <div class="grid-item">
+                    <img src="images/products/1.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Apple</p>
+                        <p class="price">Rs. 50.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/products/2.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Papaya</p>
+                        <p class="price">Rs. 35.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/products/3.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Berries</p>
+                        <p class="price">Rs. 150.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/products/4.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Pasion Fruit</p>
+                        <p class="price">Rs. 250.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/products/5.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Mangos</p>
+                        <p class="price">Rs. 60.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/products/6.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Onions</p>
+                        <p class="price">Rs. 25.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/products/7.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Kivi Fruit</p>
+                        <p class="price">Rs. 120.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="images/products/8.png" alt="About Us" />
+                    <div class="grid-item-info">
+                        <p>Mushroom</p>
+                        <p class="price">Rs. 180.00/-</p>
+                        <div><button>-</button><input type="text" value="1" /><button>+</button></div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </body>
+    <script>
+    function changeDisplay(id)
+    {
+        document.getElementById("flex-container").style.display = 'none';
+        document.getElementById("grid-container").style.display = 'none';
+        document.getElementById("display-1").classList.remove("active");
+        document.getElementById("display-2").classList.remove("active");
+        if(id == 1){
+            document.getElementById("flex-container").style.display = 'flex';
+            document.getElementById("display-1").classList.add("active");
+        }
+        if(id == 2){
+            document.getElementById("grid-container").style.display = 'grid';
+            document.getElementById("display-2").classList.add("active");
+        }
+    }
+    </script>
+</html>

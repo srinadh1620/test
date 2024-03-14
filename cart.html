@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Experiment 1 || Cart</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <style>
+        .cart-items{
+            width: 100%;
+            float: left;
+        }
+        .pricing-info, .items-info{
+            padding: 20px;
+            background: #f1f1f1;
+        }
+        .pricing-info h4, .items-info h4{
+            margin: unset;
+        }
+        .ml-10{
+            margin-left: 10px;
+        }
+        table, td, th {
+            border: 1px solid;
+            text-align: center;
+        }
+        td img{
+            height: 80px;
+        }
+        thead{
+            height: 45px;
+            background: beige;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;;
+        }
+        tr{
+            height: 35px;
+        }
+        .text-right{
+            text-align: right;;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a class="active" href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="page-content">
+            <h1 class="main-title">Cart Products</h1>
+            <div class="cart-items">
+                <div class="items-info">
+                    <h4>Your Cart Products</h4>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S No</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>
+                                <img src="images/products/1.png" alt="About Us" />
+                            </td>
+                            <td>Apple</td>
+                            <td>50.00</td>
+                            <td>4</td>
+                            <td>200.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>
+                                <img src="images/products/3.png" alt="About Us" />
+                            </td>
+                            <td>Berries</td>
+                            <td>150.00</td>
+                            <td>2</td>
+                            <td>300.00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>
+                                <img src="images/products/5.png" alt="About Us" />
+                            </td>
+                            <td>Mangos</td>
+                            <td>60.00</td>
+                            <td>10</td>
+                            <td>600.00</td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" class="text-right"><b>Total : </b></td>
+                            <td>1100.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
